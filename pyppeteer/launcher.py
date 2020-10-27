@@ -141,7 +141,7 @@ class Launcher(object):
         options['env'] = self.env
         if not self.dumpio:
             options['stdout'] = subprocess.PIPE
-            options['stderr'] = subprocess.STDOUT
+            options['stderr'] = subprocess.DEVNULL
 
         self.proc = subprocess.Popen(  # type: ignore
             self.cmd, **options, )
